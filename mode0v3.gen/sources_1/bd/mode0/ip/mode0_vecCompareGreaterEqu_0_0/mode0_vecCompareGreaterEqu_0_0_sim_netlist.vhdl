@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Nov 11 13:59:06 2025
+-- Date        : Tue Nov 11 14:24:10 2025
 -- Host        : hp-elite running 64-bit Linux Mint 22.1
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_vecCompareGreaterEqu_0_0/mode0_vecCompareGreaterEqu_0_0_sim_netlist.vhdl

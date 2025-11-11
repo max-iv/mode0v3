@@ -195,6 +195,30 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecDiode_0_0/mode0_vecDiode_0_0.xci">
+          <Proxy FileSetName="mode0_vecDiode_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecShiftR_2_0/mode0_vecShiftR_2_0.xci">
+          <Proxy FileSetName="mode0_vecShiftR_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSubNoOverflow_3_0/mode0_vecSubNoOverflow_3_0.xci">
+          <Proxy FileSetName="mode0_vecSubNoOverflow_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecAddNoOverflow_3_0/mode0_vecAddNoOverflow_3_0.xci">
+          <Proxy FileSetName="mode0_vecAddNoOverflow_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSwitch_0_0/mode0_vecSwitch_0_0.xci">
+          <Proxy FileSetName="mode0_vecSwitch_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecCompareGreaterEqu_0_0/mode0_vecCompareGreaterEqu_0_0.xci">
+          <Proxy FileSetName="mode0_vecCompareGreaterEqu_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecCompareSmallerEqu_0_0/mode0_vecCompareSmallerEqu_0_0.xci">
+          <Proxy FileSetName="mode0_vecCompareSmallerEqu_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSwitch_1_0/mode0_vecSwitch_1_0.xci">
+          <Proxy FileSetName="mode0_vecSwitch_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecShiftL_0_3/mode0_vecShiftL_0_3.xci">
           <Proxy FileSetName="mode0_vecShiftL_0_3"/>
         </CompFileExtendedInfo>
@@ -221,6 +245,39 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_stream_ctrl_0_0/mode0_stream_ctrl_0_0.xci">
           <Proxy FileSetName="mode0_stream_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_processing_system7_0_0/mode0_processing_system7_0_0.xci">
+          <Proxy FileSetName="mode0_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_reg_bank_0_0/mode0_reg_bank_0_0.xci">
+          <Proxy FileSetName="mode0_reg_bank_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecAddNoOverflow_2_1/mode0_vecAddNoOverflow_2_1.xci">
+          <Proxy FileSetName="mode0_vecAddNoOverflow_2_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_proc_sys_reset_0_0/mode0_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="mode0_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_xbar_0/mode0_xbar_0.xci">
+          <Proxy FileSetName="mode0_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_watchdog_0_2/mode0_watchdog_0_2.xci">
+          <Proxy FileSetName="mode0_watchdog_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_dac_0_0/mode0_dac_0_0.xci">
+          <Proxy FileSetName="mode0_dac_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_adc_0_0/mode0_adc_0_0.xci">
+          <Proxy FileSetName="mode0_adc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_clkDivider_0_0/mode0_clkDivider_0_0.xci">
+          <Proxy FileSetName="mode0_clkDivider_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_clk_0_0/mode0_clk_0_0.xci">
+          <Proxy FileSetName="mode0_clk_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_stream16ToVec_0_0/mode0_stream16ToVec_0_0.xci">
+          <Proxy FileSetName="mode0_stream16ToVec_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecShiftR_0_1/mode0_vecShiftR_0_1.xci">
           <Proxy FileSetName="mode0_vecShiftR_0_1"/>
@@ -284,63 +341,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSubNoOverflow_2_2/mode0_vecSubNoOverflow_2_2.xci">
           <Proxy FileSetName="mode0_vecSubNoOverflow_2_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecDiode_0_0/mode0_vecDiode_0_0.xci">
-          <Proxy FileSetName="mode0_vecDiode_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecShiftR_2_0/mode0_vecShiftR_2_0.xci">
-          <Proxy FileSetName="mode0_vecShiftR_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSubNoOverflow_3_0/mode0_vecSubNoOverflow_3_0.xci">
-          <Proxy FileSetName="mode0_vecSubNoOverflow_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecAddNoOverflow_3_0/mode0_vecAddNoOverflow_3_0.xci">
-          <Proxy FileSetName="mode0_vecAddNoOverflow_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSwitch_0_0/mode0_vecSwitch_0_0.xci">
-          <Proxy FileSetName="mode0_vecSwitch_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecCompareGreaterEqu_0_0/mode0_vecCompareGreaterEqu_0_0.xci">
-          <Proxy FileSetName="mode0_vecCompareGreaterEqu_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecCompareSmallerEqu_0_0/mode0_vecCompareSmallerEqu_0_0.xci">
-          <Proxy FileSetName="mode0_vecCompareSmallerEqu_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecSwitch_1_0/mode0_vecSwitch_1_0.xci">
-          <Proxy FileSetName="mode0_vecSwitch_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_stream16ToVec_0_0/mode0_stream16ToVec_0_0.xci">
-          <Proxy FileSetName="mode0_stream16ToVec_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_proc_sys_reset_0_0/mode0_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="mode0_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_processing_system7_0_0/mode0_processing_system7_0_0.xci">
-          <Proxy FileSetName="mode0_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_vecAddNoOverflow_2_1/mode0_vecAddNoOverflow_2_1.xci">
-          <Proxy FileSetName="mode0_vecAddNoOverflow_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_reg_bank_0_0/mode0_reg_bank_0_0.xci">
-          <Proxy FileSetName="mode0_reg_bank_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_xbar_0/mode0_xbar_0.xci">
-          <Proxy FileSetName="mode0_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_watchdog_0_2/mode0_watchdog_0_2.xci">
-          <Proxy FileSetName="mode0_watchdog_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_dac_0_0/mode0_dac_0_0.xci">
-          <Proxy FileSetName="mode0_dac_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_adc_0_0/mode0_adc_0_0.xci">
-          <Proxy FileSetName="mode0_adc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_clkDivider_0_0/mode0_clkDivider_0_0.xci">
-          <Proxy FileSetName="mode0_clkDivider_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mode0.bd" FileRelPathName="ip/mode0_clk_0_0/mode0_clk_0_0.xci">
-          <Proxy FileSetName="mode0_clk_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mode0_wrapper.v">

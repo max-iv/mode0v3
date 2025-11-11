@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 // Date        : Tue Nov 11 13:53:32 2025
 // Host        : hp-elite running 64-bit Linux Mint 22.1
-// Command     : write_verilog -force -mode funcsim
-//               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_adc_0_0/mode0_adc_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top mode0_adc_0_0 -prefix
+//               mode0_adc_0_0_ mode0_adc_0_0_sim_netlist.v
 // Design      : mode0_adc_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,60 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "mode0_adc_0_0,adc_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
-(* x_core_info = "adc_bd,Vivado 2020.2" *) 
-(* NotValidForBitStream *)
-module mode0_adc_0_0
-   (adc_data_1_i,
-    adc_data_1_tdata,
-    adc_data_1_tvalid,
-    adc_data_2_i,
-    adc_data_2_tdata,
-    adc_data_2_tvalid,
-    clk_125,
-    resetn);
-  input [13:0]adc_data_1_i;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_1 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME adc_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output [15:0]adc_data_1_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_1 TVALID" *) output adc_data_1_tvalid;
-  input [13:0]adc_data_2_i;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_2 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME adc_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output [15:0]adc_data_2_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_2 TVALID" *) output adc_data_2_tvalid;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.000, ASSOCIATED_BUSIF adc_data_1:adc_data_2, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input clk_125;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
-
-  wire \<const0> ;
-  wire [13:0]adc_data_1_i;
-  wire [15:2]\^adc_data_1_tdata ;
-  wire adc_data_1_tvalid;
-  wire [13:0]adc_data_2_i;
-  wire [15:2]\^adc_data_2_tdata ;
-  wire adc_data_2_tvalid;
-  wire clk_125;
-  wire resetn;
-  wire [1:0]NLW_U0_adc_data_1_tdata_UNCONNECTED;
-  wire [1:0]NLW_U0_adc_data_2_tdata_UNCONNECTED;
-
-  assign adc_data_1_tdata[15:2] = \^adc_data_1_tdata [15:2];
-  assign adc_data_1_tdata[1] = \<const0> ;
-  assign adc_data_1_tdata[0] = \<const0> ;
-  assign adc_data_2_tdata[15:2] = \^adc_data_2_tdata [15:2];
-  assign adc_data_2_tdata[1] = \<const0> ;
-  assign adc_data_2_tdata[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  (* hw_handoff = "adc_bd.hwdef" *) 
-  mode0_adc_0_0_adc_bd U0
-       (.adc_data_1_i(adc_data_1_i),
-        .adc_data_1_tdata({\^adc_data_1_tdata ,NLW_U0_adc_data_1_tdata_UNCONNECTED[1:0]}),
-        .adc_data_1_tvalid(adc_data_1_tvalid),
-        .adc_data_2_i(adc_data_2_i),
-        .adc_data_2_tdata({\^adc_data_2_tdata ,NLW_U0_adc_data_2_tdata_UNCONNECTED[1:0]}),
-        .adc_data_2_tvalid(adc_data_2_tvalid),
-        .clk_125(clk_125),
-        .resetn(resetn));
-endmodule
-
-(* ORIG_REF_NAME = "ADC" *) 
 module mode0_adc_0_0_ADC
    (adc_data_1_tdata,
     adc_data_2_tdata,
@@ -462,7 +408,7 @@ module mode0_adc_0_0_ADC
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "adc_bd" *) (* hw_handoff = "adc_bd.hwdef" *) 
+(* hw_handoff = "adc_bd.hwdef" *) 
 module mode0_adc_0_0_adc_bd
    (adc_data_1_i,
     adc_data_1_tdata,
@@ -510,7 +456,6 @@ module mode0_adc_0_0_adc_bd
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "adc_bd_ADC_0_1" *) 
 module mode0_adc_0_0_adc_bd_ADC_0_1
    (adc_data_1_tdata,
     adc_data_2_tdata,
@@ -540,6 +485,59 @@ module mode0_adc_0_0_adc_bd_ADC_0_1
         .adc_data_1_tdata(adc_data_1_tdata),
         .adc_data_2_i(adc_data_2_i),
         .adc_data_2_tdata(adc_data_2_tdata),
+        .adc_data_2_tvalid(adc_data_2_tvalid),
+        .clk_125(clk_125),
+        .resetn(resetn));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "mode0_adc_0_0,adc_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
+(* x_core_info = "adc_bd,Vivado 2020.2" *) 
+(* NotValidForBitStream *)
+module mode0_adc_0_0
+   (adc_data_1_i,
+    adc_data_1_tdata,
+    adc_data_1_tvalid,
+    adc_data_2_i,
+    adc_data_2_tdata,
+    adc_data_2_tvalid,
+    clk_125,
+    resetn);
+  input [13:0]adc_data_1_i;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_1 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME adc_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output [15:0]adc_data_1_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_1 TVALID" *) output adc_data_1_tvalid;
+  input [13:0]adc_data_2_i;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_2 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME adc_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output [15:0]adc_data_2_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 adc_data_2 TVALID" *) output adc_data_2_tvalid;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.000, ASSOCIATED_BUSIF adc_data_1:adc_data_2, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input clk_125;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
+
+  wire \<const0> ;
+  wire [13:0]adc_data_1_i;
+  wire [15:2]\^adc_data_1_tdata ;
+  wire adc_data_1_tvalid;
+  wire [13:0]adc_data_2_i;
+  wire [15:2]\^adc_data_2_tdata ;
+  wire adc_data_2_tvalid;
+  wire clk_125;
+  wire resetn;
+  wire [1:0]NLW_U0_adc_data_1_tdata_UNCONNECTED;
+  wire [1:0]NLW_U0_adc_data_2_tdata_UNCONNECTED;
+
+  assign adc_data_1_tdata[15:2] = \^adc_data_1_tdata [15:2];
+  assign adc_data_1_tdata[1] = \<const0> ;
+  assign adc_data_1_tdata[0] = \<const0> ;
+  assign adc_data_2_tdata[15:2] = \^adc_data_2_tdata [15:2];
+  assign adc_data_2_tdata[1] = \<const0> ;
+  assign adc_data_2_tdata[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  (* hw_handoff = "adc_bd.hwdef" *) 
+  mode0_adc_0_0_adc_bd U0
+       (.adc_data_1_i(adc_data_1_i),
+        .adc_data_1_tdata({\^adc_data_1_tdata ,NLW_U0_adc_data_1_tdata_UNCONNECTED[1:0]}),
+        .adc_data_1_tvalid(adc_data_1_tvalid),
+        .adc_data_2_i(adc_data_2_i),
+        .adc_data_2_tdata({\^adc_data_2_tdata ,NLW_U0_adc_data_2_tdata_UNCONNECTED[1:0]}),
         .adc_data_2_tvalid(adc_data_2_tvalid),
         .clk_125(clk_125),
         .resetn(resetn));

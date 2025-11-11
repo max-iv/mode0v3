@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Tue Nov 11 13:53:32 2025
 -- Host        : hp-elite running 64-bit Linux Mint 22.1
--- Command     : write_vhdl -force -mode funcsim
---               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_clk_0_0/mode0_clk_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mode0_clk_0_0 -prefix
+--               mode0_clk_0_0_ mode0_clk_0_0_sim_netlist.vhdl
 -- Design      : mode0_clk_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz is
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz : entity is "clk_bd_clk_wiz_0_0_clk_wiz";
 end mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz is
@@ -191,8 +189,6 @@ entity mode0_clk_0_0_clk_bd_clk_wiz_0_0 is
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_clk_0_0_clk_bd_clk_wiz_0_0 : entity is "clk_bd_clk_wiz_0_0";
 end mode0_clk_0_0_clk_bd_clk_wiz_0_0;
 
 architecture STRUCTURE of mode0_clk_0_0_clk_bd_clk_wiz_0_0 is
@@ -221,8 +217,6 @@ entity mode0_clk_0_0_clk_bd is
     clk_250_m45 : out STD_LOGIC;
     locked : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_clk_0_0_clk_bd : entity is "clk_bd";
   attribute hw_handoff : string;
   attribute hw_handoff of mode0_clk_0_0_clk_bd : entity is "clk_bd.hwdef";
 end mode0_clk_0_0_clk_bd;

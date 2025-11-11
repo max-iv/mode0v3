@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Tue Nov 11 13:53:32 2025
 -- Host        : hp-elite running 64-bit Linux Mint 22.1
--- Command     : write_vhdl -force -mode funcsim
---               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_adc_0_0/mode0_adc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mode0_adc_0_0 -prefix
+--               mode0_adc_0_0_ mode0_adc_0_0_sim_netlist.vhdl
 -- Design      : mode0_adc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,8 +24,6 @@ entity mode0_adc_0_0_ADC is
     adc_data_2_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
     resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_adc_0_0_ADC : entity is "ADC";
 end mode0_adc_0_0_ADC;
 
 architecture STRUCTURE of mode0_adc_0_0_ADC is
@@ -583,8 +581,6 @@ entity mode0_adc_0_0_adc_bd_ADC_0_1 is
     adc_data_2_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
     resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_adc_0_0_adc_bd_ADC_0_1 : entity is "adc_bd_ADC_0_1";
 end mode0_adc_0_0_adc_bd_ADC_0_1;
 
 architecture STRUCTURE of mode0_adc_0_0_adc_bd_ADC_0_1 is
@@ -615,8 +611,6 @@ entity mode0_adc_0_0_adc_bd is
     clk_125 : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_adc_0_0_adc_bd : entity is "adc_bd";
   attribute hw_handoff : string;
   attribute hw_handoff of mode0_adc_0_0_adc_bd : entity is "adc_bd.hwdef";
 end mode0_adc_0_0_adc_bd;

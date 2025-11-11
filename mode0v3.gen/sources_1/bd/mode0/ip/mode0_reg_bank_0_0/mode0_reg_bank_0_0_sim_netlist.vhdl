@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Nov 11 13:54:21 2025
+-- Date        : Tue Nov 11 13:54:20 2025
 -- Host        : hp-elite running 64-bit Linux Mint 22.1
--- Command     : write_vhdl -force -mode funcsim
---               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_reg_bank_0_0/mode0_reg_bank_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mode0_reg_bank_0_0 -prefix
+--               mode0_reg_bank_0_0_ mode0_reg_bank_0_0_sim_netlist.vhdl
 -- Design      : mode0_reg_bank_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -53,8 +53,6 @@ entity mode0_reg_bank_0_0_axi_reg_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_reg_bank_0_0_axi_reg_v1_0_S00_AXI : entity is "axi_reg_v1_0_S00_AXI";
 end mode0_reg_bank_0_0_axi_reg_v1_0_S00_AXI;
 
 architecture STRUCTURE of mode0_reg_bank_0_0_axi_reg_v1_0_S00_AXI is
@@ -5751,8 +5749,6 @@ entity mode0_reg_bank_0_0_axi_reg_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mode0_reg_bank_0_0_axi_reg_v1_0 : entity is "axi_reg_v1_0";
 end mode0_reg_bank_0_0_axi_reg_v1_0;
 
 architecture STRUCTURE of mode0_reg_bank_0_0_axi_reg_v1_0 is

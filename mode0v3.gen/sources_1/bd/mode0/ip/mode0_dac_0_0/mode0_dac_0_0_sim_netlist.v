@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 // Date        : Tue Nov 11 13:54:17 2025
 // Host        : hp-elite running 64-bit Linux Mint 22.1
-// Command     : write_verilog -force -mode funcsim
-//               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_dac_0_0/mode0_dac_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top mode0_dac_0_0 -prefix
+//               mode0_dac_0_0_ mode0_dac_0_0_sim_netlist.v
 // Design      : mode0_dac_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,69 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "mode0_dac_0_0,dac_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
-(* x_core_info = "dac_bd,Vivado 2020.2" *) 
-(* NotValidForBitStream *)
-module mode0_dac_0_0
-   (clk_125,
-    clk_250,
-    clk_250_m45,
-    dac_clk_o,
-    dac_data_1_tdata,
-    dac_data_1_tvalid,
-    dac_data_2_tdata,
-    dac_data_2_tvalid,
-    dac_data_o,
-    dac_rst_o,
-    dac_sel_o,
-    dac_wrt_o,
-    resetn);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.000, ASSOCIATED_BUSIF dac_data_1:dac_data_2, ASSOCIATED_RESET resetn, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input clk_125;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250, FREQ_HZ 250000000, PHASE 0.000, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250, INSERT_VIP 0" *) input clk_250;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250_M45 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250_M45, FREQ_HZ 250000000, PHASE -45, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250_m45, INSERT_VIP 0" *) input clk_250_m45;
-  output dac_clk_o;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_1 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME dac_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input [15:0]dac_data_1_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_1 TVALID" *) input dac_data_1_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_2 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME dac_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input [15:0]dac_data_2_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_2 TVALID" *) input dac_data_2_tvalid;
-  output [13:0]dac_data_o;
-  output dac_rst_o;
-  output dac_sel_o;
-  output dac_wrt_o;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
-
-  wire clk_125;
-  wire clk_250;
-  wire clk_250_m45;
-  wire dac_clk_o;
-  wire [15:0]dac_data_1_tdata;
-  wire dac_data_1_tvalid;
-  wire [15:0]dac_data_2_tdata;
-  wire dac_data_2_tvalid;
-  wire [13:0]dac_data_o;
-  wire dac_rst_o;
-  wire dac_sel_o;
-  wire dac_wrt_o;
-  wire resetn;
-
-  (* hw_handoff = "dac_bd.hwdef" *) 
-  mode0_dac_0_0_dac_bd U0
-       (.clk_125(clk_125),
-        .clk_250(clk_250),
-        .clk_250_m45(clk_250_m45),
-        .dac_clk_o(dac_clk_o),
-        .dac_data_1_tdata({dac_data_1_tdata[15:2],1'b0,1'b0}),
-        .dac_data_1_tvalid(dac_data_1_tvalid),
-        .dac_data_2_tdata({dac_data_2_tdata[15:2],1'b0,1'b0}),
-        .dac_data_2_tvalid(dac_data_2_tvalid),
-        .dac_data_o(dac_data_o),
-        .dac_rst_o(dac_rst_o),
-        .dac_sel_o(dac_sel_o),
-        .dac_wrt_o(dac_wrt_o),
-        .resetn(resetn));
-endmodule
-
-(* ORIG_REF_NAME = "DAC" *) 
 module mode0_dac_0_0_DAC
    (dac_clk_o,
     dac_wrt_o,
@@ -877,7 +814,7 @@ module mode0_dac_0_0_DAC
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "dac_bd" *) (* hw_handoff = "dac_bd.hwdef" *) 
+(* hw_handoff = "dac_bd.hwdef" *) 
 module mode0_dac_0_0_dac_bd
    (clk_125,
     clk_250,
@@ -937,7 +874,6 @@ module mode0_dac_0_0_dac_bd
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "dac_bd_DAC_0_0" *) 
 module mode0_dac_0_0_dac_bd_DAC_0_0
    (dac_clk_o,
     dac_wrt_o,
@@ -988,6 +924,68 @@ module mode0_dac_0_0_dac_bd_DAC_0_0
         .dac_data_1_tdata(dac_data_1_tdata),
         .dac_data_1_tvalid(dac_data_1_tvalid),
         .dac_data_2_tdata(dac_data_2_tdata),
+        .dac_data_2_tvalid(dac_data_2_tvalid),
+        .dac_data_o(dac_data_o),
+        .dac_rst_o(dac_rst_o),
+        .dac_sel_o(dac_sel_o),
+        .dac_wrt_o(dac_wrt_o),
+        .resetn(resetn));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "mode0_dac_0_0,dac_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
+(* x_core_info = "dac_bd,Vivado 2020.2" *) 
+(* NotValidForBitStream *)
+module mode0_dac_0_0
+   (clk_125,
+    clk_250,
+    clk_250_m45,
+    dac_clk_o,
+    dac_data_1_tdata,
+    dac_data_1_tvalid,
+    dac_data_2_tdata,
+    dac_data_2_tvalid,
+    dac_data_o,
+    dac_rst_o,
+    dac_sel_o,
+    dac_wrt_o,
+    resetn);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.000, ASSOCIATED_BUSIF dac_data_1:dac_data_2, ASSOCIATED_RESET resetn, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input clk_125;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250, FREQ_HZ 250000000, PHASE 0.000, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250, INSERT_VIP 0" *) input clk_250;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250_M45 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250_M45, FREQ_HZ 250000000, PHASE -45, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250_m45, INSERT_VIP 0" *) input clk_250_m45;
+  output dac_clk_o;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_1 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME dac_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input [15:0]dac_data_1_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_1 TVALID" *) input dac_data_1_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_2 TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME dac_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, LAYERED_METADATA undef, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) input [15:0]dac_data_2_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 dac_data_2 TVALID" *) input dac_data_2_tvalid;
+  output [13:0]dac_data_o;
+  output dac_rst_o;
+  output dac_sel_o;
+  output dac_wrt_o;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
+
+  wire clk_125;
+  wire clk_250;
+  wire clk_250_m45;
+  wire dac_clk_o;
+  wire [15:0]dac_data_1_tdata;
+  wire dac_data_1_tvalid;
+  wire [15:0]dac_data_2_tdata;
+  wire dac_data_2_tvalid;
+  wire [13:0]dac_data_o;
+  wire dac_rst_o;
+  wire dac_sel_o;
+  wire dac_wrt_o;
+  wire resetn;
+
+  (* hw_handoff = "dac_bd.hwdef" *) 
+  mode0_dac_0_0_dac_bd U0
+       (.clk_125(clk_125),
+        .clk_250(clk_250),
+        .clk_250_m45(clk_250_m45),
+        .dac_clk_o(dac_clk_o),
+        .dac_data_1_tdata({dac_data_1_tdata[15:2],1'b0,1'b0}),
+        .dac_data_1_tvalid(dac_data_1_tvalid),
+        .dac_data_2_tdata({dac_data_2_tdata[15:2],1'b0,1'b0}),
         .dac_data_2_tvalid(dac_data_2_tvalid),
         .dac_data_o(dac_data_o),
         .dac_rst_o(dac_rst_o),

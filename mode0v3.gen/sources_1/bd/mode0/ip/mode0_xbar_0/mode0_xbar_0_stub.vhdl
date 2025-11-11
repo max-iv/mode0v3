@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Tue Nov 11 14:04:40 2025
 -- Host        : hp-elite running 64-bit Linux Mint 22.1
--- Command     : write_vhdl -force -mode synth_stub
---               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_xbar_0/mode0_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mode0_xbar_0 -prefix
+--               mode0_xbar_0_ mode0_xbar_0_stub.vhdl
 -- Design      : mode0_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

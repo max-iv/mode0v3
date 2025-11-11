@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 // Date        : Tue Nov 11 13:53:32 2025
 // Host        : hp-elite running 64-bit Linux Mint 22.1
-// Command     : write_verilog -force -mode funcsim
-//               /home/dmcginnis427/Dropbox/vivado/mode0v3/mode0v3.gen/sources_1/bd/mode0/ip/mode0_clk_0_0/mode0_clk_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top mode0_clk_0_0 -prefix
+//               mode0_clk_0_0_ mode0_clk_0_0_sim_netlist.v
 // Design      : mode0_clk_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,49 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "mode0_clk_0_0,clk_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
-(* x_core_info = "clk_bd,Vivado 2020.2" *) 
-(* NotValidForBitStream *)
-module mode0_clk_0_0
-   (adc_cdcs_o,
-    adc_clk_n_i,
-    adc_clk_p_i,
-    clk_125,
-    clk_250,
-    clk_250_m45,
-    locked);
-  output adc_cdcs_o;
-  input adc_clk_n_i;
-  input adc_clk_p_i;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output clk_125;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250, FREQ_HZ 250000000, PHASE 0.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250, INSERT_VIP 0" *) output clk_250;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250_M45 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250_M45, FREQ_HZ 250000000, PHASE -45.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250_m45, INSERT_VIP 0" *) output clk_250_m45;
-  output locked;
-
-  wire \<const1> ;
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire adc_clk_n_i;
-  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire adc_clk_p_i;
-  wire clk_125;
-  wire clk_250;
-  wire clk_250_m45;
-  wire locked;
-  wire NLW_U0_adc_cdcs_o_UNCONNECTED;
-
-  assign adc_cdcs_o = \<const1> ;
-  (* hw_handoff = "clk_bd.hwdef" *) 
-  mode0_clk_0_0_clk_bd U0
-       (.adc_cdcs_o(NLW_U0_adc_cdcs_o_UNCONNECTED),
-        .adc_clk_n_i(adc_clk_n_i),
-        .adc_clk_p_i(adc_clk_p_i),
-        .clk_125(clk_125),
-        .clk_250(clk_250),
-        .clk_250_m45(clk_250_m45),
-        .locked(locked));
-  VCC VCC
-       (.P(\<const1> ));
-endmodule
-
-(* ORIG_REF_NAME = "clk_bd" *) (* hw_handoff = "clk_bd.hwdef" *) 
+(* hw_handoff = "clk_bd.hwdef" *) 
 module mode0_clk_0_0_clk_bd
    (adc_cdcs_o,
     adc_clk_n_i,
@@ -91,7 +49,6 @@ module mode0_clk_0_0_clk_bd
         .locked(locked));
 endmodule
 
-(* ORIG_REF_NAME = "clk_bd_clk_wiz_0_0" *) 
 module mode0_clk_0_0_clk_bd_clk_wiz_0_0
    (clk_125,
     clk_250,
@@ -122,7 +79,6 @@ module mode0_clk_0_0_clk_bd_clk_wiz_0_0
         .locked(locked));
 endmodule
 
-(* ORIG_REF_NAME = "clk_bd_clk_wiz_0_0_clk_wiz" *) 
 module mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz
    (clk_125,
     clk_250,
@@ -274,6 +230,48 @@ module mode0_clk_0_0_clk_bd_clk_wiz_0_0_clk_wiz
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
         .RST(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "mode0_clk_0_0,clk_bd,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
+(* x_core_info = "clk_bd,Vivado 2020.2" *) 
+(* NotValidForBitStream *)
+module mode0_clk_0_0
+   (adc_cdcs_o,
+    adc_clk_n_i,
+    adc_clk_p_i,
+    clk_125,
+    clk_250,
+    clk_250_m45,
+    locked);
+  output adc_cdcs_o;
+  input adc_clk_n_i;
+  input adc_clk_p_i;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_125, FREQ_HZ 125000000, PHASE 0.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_125, INSERT_VIP 0" *) output clk_125;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250, FREQ_HZ 250000000, PHASE 0.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250, INSERT_VIP 0" *) output clk_250;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK_250_M45 CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK_250_M45, FREQ_HZ 250000000, PHASE -45.0, FREQ_TOLERANCE_HZ 0, CLK_DOMAIN mode0_clk_0_0_clk_250_m45, INSERT_VIP 0" *) output clk_250_m45;
+  output locked;
+
+  wire \<const1> ;
+  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire adc_clk_n_i;
+  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) wire adc_clk_p_i;
+  wire clk_125;
+  wire clk_250;
+  wire clk_250_m45;
+  wire locked;
+  wire NLW_U0_adc_cdcs_o_UNCONNECTED;
+
+  assign adc_cdcs_o = \<const1> ;
+  (* hw_handoff = "clk_bd.hwdef" *) 
+  mode0_clk_0_0_clk_bd U0
+       (.adc_cdcs_o(NLW_U0_adc_cdcs_o_UNCONNECTED),
+        .adc_clk_n_i(adc_clk_n_i),
+        .adc_clk_p_i(adc_clk_p_i),
+        .clk_125(clk_125),
+        .clk_250(clk_250),
+        .clk_250_m45(clk_250_m45),
+        .locked(locked));
+  VCC VCC
+       (.P(\<const1> ));
 endmodule
 `ifndef GLBL
 `define GLBL
